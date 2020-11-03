@@ -18,10 +18,20 @@
   align-items: center;
 }
 
+.header form{
+  display: flex;
+}
+
 .logo{
   font-size: 2rem;
   color: #eee;
   letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 }
 
 .search{
@@ -35,6 +45,21 @@
 
 .search::placeholder{
   color: #eee;
+}
+
+.submit-btn{
+  display: flex;
+  align-items: center;
+  margin: 0 0.6rem;
+  padding: 0.3rem 0.5rem;
+  outline: none;
+  border: 2px solid #09203f;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.submit-btn img{
+  width: 20px;
 }
 
 .App{
