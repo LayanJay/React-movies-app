@@ -1,13 +1,87 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  background-color: #074494;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-size: 2rem;
+  color: #eee;
+  letter-spacing: 0.1rem;
+}
+
+.search{
+  border: 2px solid #09203f;
+  border-radius: 5rem;
+  outline: none;
+  color: #eee;
+  background: transparent;
+  padding: 0.5rem 1.2rem;
+}
+
+.search::placeholder{
+  color: #eee;
+}
+
+.App{
+  background-color:  #09203f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around
+}
+
+.movie{
+  position: relative;
+  background-color:  #0c3366;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 1.3rem;
+  width: 270px;
+}
+
+.movie img{
+  max-width: 100%;
+}
+
+.movie-info{
+  color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.movie-overview{
+  background-color: #074494;
+  color: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 1rem;
+  overflow: auto;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover .movie-overview{
+  transform: translateY(0%);
 }
