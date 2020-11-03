@@ -9,7 +9,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container{
+  width: device-width;
+  background-color: #09203f;
+  min-height: 100vh;
+}
+
 .header{
+  width: 100%;
   background-color: #074494;
   padding: 1rem;
   display: flex;
@@ -30,8 +37,8 @@
   transition: 0.2s ease;
 }
 
-.logo:hover{
-  transform: scale(1.1);
+.form{
+  width: device-width;
 }
 
 .search{
@@ -40,7 +47,7 @@
   outline: none;
   color: #eee;
   background: transparent;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 0.7rem;
 }
 
 .search::placeholder{
@@ -50,23 +57,23 @@
 .submit-btn{
   display: flex;
   align-items: center;
-  margin: 0 0.6rem;
+  margin-left: 0.5rem;
   padding: 0.3rem 0.5rem;
   outline: none;
   border: 2px solid #09203f;
   border-radius: 50%;
   background: transparent;
+  cursor: pointer;
 }
 
 .submit-btn img{
-  width: 20px;
+  width: 1.2rem;
 }
 
 .App{
-  background-color:  #09203f;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .movie{
@@ -76,7 +83,7 @@
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 1.3rem;
-  width: 270px;
+  width: 16.9rem;
 }
 
 .movie img{

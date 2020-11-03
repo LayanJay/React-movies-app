@@ -5,9 +5,9 @@ import Movie from "./Components/Movie";
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY;
 
-  const FEACHERED_API = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+  const FEACHERED_API = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=1`;
 
-  const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=`;
+  const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     // requesting
     getMovies(FEACHERED_API);
-  }, []);
+  }, [FEACHERED_API]);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -44,12 +44,12 @@ function App() {
   };
 
   return (
-    <>
+    <div className="container">
       <div className="header">
         <div className="logo" onClick={home}>
           MovieHub
         </div>
-        <form onSubmit={handleOnSubmit}>
+        <form className="form" onSubmit={handleOnSubmit}>
           <input
             type="search"
             id="search"
@@ -71,7 +71,7 @@ function App() {
           <Movie key={movie.id} {...movie} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
