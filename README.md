@@ -20,6 +20,8 @@ Search : "https://api.themoviedb.org/3/search/movie?&api_key={API_key}&query="
 
 - (You can create a `.env` file and paste the API key as `REACT_APP_API_KEY = API_KEY` for the security. And use it wherever you want using `process.env.REACT_APP_API_KEY` snippet.)
 
+![Screenshot](screenshot.PNG)
+
 ## Available Scripts
 
 In the project directory, you can run:
