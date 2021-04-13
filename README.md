@@ -1,4 +1,6 @@
-# How to use
+# Deprecated (Not actively maintained, but you can still use.)
+
+## How to use
 
 - You have to search [The Movie DB](https://www.themoviedb.org/) and create your account.
 
